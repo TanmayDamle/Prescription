@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prescription</title>
+  <link rel="stylesheet" type="text/css" href="LoginCSS.css">
+</head>
+<body>
+    <div class = "container">
+        <h2>Signup</h2>
+        <form action = signup method="post">
+          <div class="form-group">
+            <label for="signupName">Name:</label>
+            <input type="text" name="signup_name" id="signupName" required>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">User Name:</label>
+            <input type="text" name="signup_uname" id="signupEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password:</label>
+            <input type="password" name="signup_pwd" id="signupPassword" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Confirm Password:</label>
+            <input type="password" name="signup_cpwd" id="signupcPassword" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" onclick="location.href = 'login.html'">Signup</button>
+          </div>
+        </form>
+    </div>
+</body>

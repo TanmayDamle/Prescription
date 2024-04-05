@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Patient</title>
+  <link rel="stylesheet" type="text/css" href="view_patient.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Data</h1>
+    <form action="view_patient" method="post">
+      <input type="text" id="searchInput" name="searchInput" oninput="convertToUppercase('searchInput')" placeholder="Search by patient name" required/>
+      <button type="submit">Search</button>
+      <!-- onclick="searchPatient()" -->
+    </form>
+    <!-- <table id="patientTable">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email</th>
+      </tr>
+    </table> -->
+  </div>
+
+  <script>
+
+    function convertToUppercase(inputid) {
+      var input = document.getElementById(inputid);
+      input.value = input.value.toUpperCase();
+    }
+
+document.getElementById('searchInput').addEventListener('click', function() {
+      fetch('/searchPatient')
+        .then()
+        .catch(error => {
+          console.log('Error:', error);
+        });
+    });
+
+  </script>
+</body>
+</html>
